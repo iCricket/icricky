@@ -1,0 +1,26 @@
+{
+  "name": "icricky_nodejs",
+  "version": "1.0.0",
+  "description": "This is server code for icricky project",
+  "main": "app.js",
+  "dependencies": {
+    "http": "0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sravankumar143/icricky.git"
+  },
+  "keywords": [
+    "icricky"
+  ],
+  "author": "sravan kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sravankumar143/icricky/issues"
+  },
+  "homepage": "https://github.com/sravankumar143/icricky#readme"
+}
