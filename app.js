@@ -7,5 +7,4 @@ http.createServer(function(req, res) {
     res.end('<html><body><h1>Hello World</h1></body></html>');
 }).listen(3000)
 
-console.log("Git File");
 console.log('Server running on port 3000.');
