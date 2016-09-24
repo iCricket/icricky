@@ -4,6 +4,7 @@
   "description": "This is server code for icricky project",
   "main": "app.js",
   "dependencies": {
+    "express": "^4.14.0",
     "http": "0.0.0"
   },
   "devDependencies": {},
