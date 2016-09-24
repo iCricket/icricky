@@ -1,16 +1,31 @@
 var http = require('http');
 var express = require('express');
-var app = express();
+var user = require('./Users');
 
-http.createServer(function(req, res) {
-    res.writeHead(200, {
-        'Content-Type': 'text/html'
+var app = express();
+app.use('/users', user)
+
+app.route('/users')
+    .get(function(req, res) {
+        user.get('/getUsers', function(req, res) {
+            res.send('users get method');
+        });
+    })
+    .post(function(req, res) {
+        res.send('user creation method')
+    })
+    .put(function(req, res) {
+        res.send('user update method')
+    })
+    .delete(function(req, res) {
+        res.send('delete user method')
     });
-    res.end('<html><body><h1>Hello World</h1></body></html>');
-}).listen(3000)
 
 app.get('/users/:user_id/books/:book_id', function(req, res) {
-    console.log(req.params);
+    var parameters = req.params;
+    console.log("user_id from URL:", parameters.user_id);
+    res.send("Sravan Welcome here");
 });
-
-console.log('Server running on port 3000.');
+app.listen(3000, function() {
+    console.log('Server running on port 3000.');
+});
